@@ -14,12 +14,12 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @RestController
 public class TheRESTController {
     // for inside of Kubernetes, lookup by service name
-    // String customer_url = "http://microspringboot2:8080/";
+    // String customer_url = "http://microspringboot2:8080";
     // for running outside of Kubernetes on local workstation
     String customer_url = "http://localhost:8082";
     
     // for inside of Kubernetes, lookup by service name
-    // String orders_url = "http://microspringboot3:8080/";
+    // String orders_url = "http://microspringboot3:8080";
     // for running outside of Kubernetes on local workstation
     String orders_url = "http://localhost:8083";
     
