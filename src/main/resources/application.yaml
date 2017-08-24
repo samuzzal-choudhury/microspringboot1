@@ -1,0 +1,5 @@
+feign:
+  hystrix:
+    enabled: true
+microspringboot1:
+  customer_url: "http://localhost:8082"

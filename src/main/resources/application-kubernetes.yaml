@@ -1,0 +1,3 @@
+microspringboot1:
+  customer_url: "http://microspringboot2:8080"
+  orders_url: "http://microspringboot3:8080"
