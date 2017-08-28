@@ -20,11 +20,13 @@ public interface CustomersService {
     class CustomerServiceFallback implements CustomersService {
         @Override
         public String getCustomers() {
+            System.out.println("Fallback on getCustomers()");
             return "C100,C101,C103";
         }
 
         @Override
         public String getCustomerOrders(String customers) {
+            System.out.println("Fallback on getCustomerOrders()");
             return "Fallback(No Orders)";
         }
     }

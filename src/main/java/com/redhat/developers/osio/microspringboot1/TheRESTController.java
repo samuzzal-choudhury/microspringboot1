@@ -21,14 +21,13 @@ public class TheRESTController {
 
     @RequestMapping("/")
     @HystrixCommand(fallbackMethod = "topLevelFallback")
-    public String getCutomersWithOrders() {
-        log.info("\n\n** getCustomers **\n\n");
+    public String getCustomersWithOrders() {
+        log.info("getCustomers()");
         String customers = customersService.getCustomers();
-
-        log.info("\n\n** Got Customers {}  **\n\n", customers);
+        log.info("Got Customers: ", customers);
 
         String customerOrders = customersService.getCustomerOrders(customers);
-
+        
         return customerOrders;
     } // getCustomers
 
