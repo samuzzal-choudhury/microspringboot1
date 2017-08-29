@@ -1,11 +1,6 @@
-feign:
-  hystrix:
-    enabled: true
 microspringboot1:
-  customer_url: "http://microspringboot2:8080"
-#  customer_url: "http://localhost:8082"
-  orders_url: "http://microspringboot3:8080"
-#  orders_url: "http://localhost:8083"
+  customer_url: "http://localhost:8082"
+  orders_url: "http://localhost:8083"
 server:
   tomcat:
-    max-threads: 10  
+    max-threads: 10
