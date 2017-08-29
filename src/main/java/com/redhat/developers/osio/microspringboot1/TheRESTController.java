@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@Slf4j
+
 public class TheRESTController {
 
 
@@ -22,12 +22,13 @@ public class TheRESTController {
     @RequestMapping("/")
     @HystrixCommand(fallbackMethod = "topLevelFallback")
     public String getCustomersWithOrders() {
-        log.info("getCustomers()");
+        System.out.println("getCustomers()");
         String customers = customersService.getCustomers();
-        log.info("Got Customers: ", customers);
+        System.out.println(String.format("Got Customers: %s", customers));
 
         String customerOrders = customersService.getCustomerOrders(customers);
-        
+        System.out.println(String.format("Got Customers Orders: %s", customerOrders));
+
         return customerOrders;
     } // getCustomers
 
